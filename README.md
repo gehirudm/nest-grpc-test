@@ -11,3 +11,5 @@ $ protoc --plugin=protoc-gen-ts_proto=.\node_modules\.bin\protoc-gen-ts_proto.cm
 Default URL : http://localhost:5000
 
 https://github.com/bloomrpc/bloomrpc
+
+Can't run on Vercel, because serverless functions do not support gRPC
