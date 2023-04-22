@@ -1,0 +1,13 @@
+{
+    "functions": {
+        "src/main.ts": {
+            "runtime": "@vercel/node"
+        }
+    },
+    "redirects": [
+        {
+            "source": "/(.*)",
+            "destination": "src/main.ts"
+        }
+    ]
+}
