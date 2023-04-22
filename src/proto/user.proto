@@ -1,0 +1,31 @@
+// hero/hero.proto
+syntax = "proto3";
+
+package user;
+
+service UsersService {
+  rpc FindOne (UserById) returns (User) {}
+  rpc AddOne (AddUser) returns (User) {}
+  rpc All (AllUsersParams) returns (AllUsersResponse) {}
+}
+
+message UserById {
+  int32 id = 1;
+}
+
+message AllUsersParams {}
+
+message AllUsersResponse {
+  repeated User users = 1;
+}
+
+message AddUser {
+    string name = 1;
+    string email = 2;
+}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+}
